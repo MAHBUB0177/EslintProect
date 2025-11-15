@@ -1,6 +1,26 @@
 import Image from "next/image";
+import { useEffect, useState } from "react";
 
 export default function Home() {
+  const person = "mahbub";
+  const [data, setData] = useState("");
+
+  const getData = async () => {
+    console.log(person, data);
+  };
+
+  useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setData("true");
+    getData();
+  }, []);
+
+  const count = 5; // ❌ 'count' is declared but its value is never used
+  function greet(name: string) {
+    // ❌ 'name' not used
+    console.log("Hello");
+  }
+
   return (
     <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
       <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
