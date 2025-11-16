@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
@@ -79,6 +81,8 @@ export default function Home() {
             Documentation
           </a>
         </div>
+
+        <div className="flex bg-amber-100 w-full shadow-2xl">mahabub</div>
       </main>
     </div>
   );
