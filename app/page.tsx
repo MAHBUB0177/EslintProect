@@ -6,21 +6,15 @@ export default function Home() {
   const person = "mahbub";
   const [data, setData] = useState("");
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const getData = async () => {
     console.log(person, data);
   };
 
   useEffect(() => {
-    // eslint-disable-next-line react-hooks/set-state-in-effect
     setData("true");
     getData();
-  }, []);
-
-  const count = 5; // ❌ 'count' is declared but its value is never used
-  function greet(name: string) {
-    // ❌ 'name' not used
-    console.log("Hello");
-  }
+  }, [getData]);
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
