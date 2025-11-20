@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import Login from "./login/page";
 
 export default function Home() {
   const person = "mahbub";
